@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', 'TeamController@index');
+Route::get('/teams', 'TeamController@index');
 Route::get('/teams/{id}', 'TeamController@show');
 Route::get('/players/{id}', 'PlayerController@show');
+Route::get('/register', 'RegisterController@create')->name('register');
+Route::post('/register', 'RegisterController@store');
