@@ -15,17 +15,7 @@ nav a:hover{
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 1rem;
-}
-.players a{
-    color: rgba(0, 0, 0, 0.623);
-    
-}
-
-.teams a{
-    color: rgba(0, 0, 0, 0.623);
-   
-    
 }

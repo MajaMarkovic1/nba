@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
+ 
     public function show($id)
     {
         $player = Player::find($id);
