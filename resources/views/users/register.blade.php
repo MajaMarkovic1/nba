@@ -2,11 +2,8 @@
 @section('content')
 
 <h1>Register</h1>
-<form action='/register' method='POST'>
+<form style="width: 40%;" action='/register' method='POST'>
 
-<!-- @foreach($errors->all() as $error)
-            <li class='btn btn-danger'>{{ $error }}</li>
-        @endforeach -->
     {{ csrf_field() }}
 
   <div class="form-group">
@@ -29,7 +26,7 @@
   </div>
   <div class="form-group">
     <label for="password_confirm">Password Confirmation</label>
-    <input name="password_confirm" type="password_confirm" class="form-control" id="password_confirm" placeholder="Password">
+    <input name="password_confirm" type="password" class="form-control" id="password_confirm" placeholder="Password">
     @include('partials.error-message', ['fieldName' => 'password_confirm'])
   
   </div>
