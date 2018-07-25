@@ -1,0 +1,31 @@
+
+nav div{
+    width: 90%; 
+    margin: 0 auto;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover{
+    color: grey;
+    text-decoration-line: none;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.players a{
+    color: rgba(0, 0, 0, 0.623);
+    
+}
+
+.teams a{
+    color: rgba(0, 0, 0, 0.623);
+   
+    
+}

@@ -18,7 +18,7 @@ class RegisterController extends Controller
             'name' => 'required', 
             'email' => 'required|email|unique:users', 
             'password' => 'required',
-            'password_confirm' => 'required_with:password|same:password|min:6'
+            'password_confirm' => 'required_with:password|same:password'
             ]); 
 
         $user = User::create([
@@ -29,6 +29,6 @@ class RegisterController extends Controller
 
         auth()->login($user);
 
-        return redirect('/teams');
+        return redirect('/');
     }
 }

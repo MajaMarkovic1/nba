@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
 
-    <ul>
+    <ul class="teams">
         @foreach($teams as $team)
-            <li><a href="/teams/{{ $team->id }}">{{ $team->name }}</a></li>
+            <li><h2><a href="/teams/{{ $team->id }}">{{ $team->name }}</a></h2></li>
         @endforeach
     </ul>
 
