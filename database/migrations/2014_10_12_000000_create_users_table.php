@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->integer('is_verified')->default(0);
-            $table->string('token')->nullable();
+            
         });
     }
 

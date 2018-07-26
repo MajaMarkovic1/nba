@@ -3,6 +3,7 @@
 
     <ul class="teams">
         @if( auth()->check() )
+       
             @foreach($teams as $team)
                 <li><h2><a href="/teams/{{ $team->id }}">{{ $team->name }}</a></h2></li>
             @endforeach

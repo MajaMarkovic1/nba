@@ -31,17 +31,26 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => request('name'),
             'email' => request('email'),
-            'password' => bcrypt(request('password')),
-            'token' => str_random(40)
+            'password' => bcrypt(request('password'))
             
         ]);
-        
         Mail::to($user->email)->send(new VerifyMail($user));
 
         //auth()->login($user);
 
 
         return redirect('/login');
+    }
+
+    public function verify($id)
+    {
+        $user = User::find($id);
+        
+        if ( $user->is_verified === 0 ){
+            $user->is_verified = 1;
+            $user->save();
+        }
+        return redirect('/');
     }
 
    

@@ -25,7 +25,10 @@ class LoginController extends Controller
                 'message' => 'Bad credentials. Please try again!'
             ]);
 
-        }   
+        } else  if( auth()->user()->is_verified === 0 ){
+            auth()->logout();
+            return 'check your email';
+        }
 
         return redirect('/');
     }
