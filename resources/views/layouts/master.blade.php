@@ -13,6 +13,7 @@
         <div>
             <a href="/">Home</a>
             @if(auth()->check())
+                <a href="/news">News</a>
                 <a href="">{{ auth()->user()->name }}</a>
                 <a href="/logout">Log out</a>
             @else

@@ -21,3 +21,5 @@ Route::post('/login', 'LoginController@store');
 Route::get('/logout', 'LoginController@destroy');
 Route::post('/teams/{id}/comments', 'CommentController@store');
 Route::get('/user/{id}', 'RegisterController@verify');
+Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', 'NewsController@show');
