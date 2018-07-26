@@ -10,4 +10,9 @@ class News extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

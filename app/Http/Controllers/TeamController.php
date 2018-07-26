@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use App\Team;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,14 @@ class TeamController extends Controller
         $team = Team::find($id);
         return view('teams.show', compact('team'));
 
+    }
+
+    public function showNews($id)
+    {
+        $team = Team::find($id);
+        $news = $team->news()->paginate(5);
+        
+        return view('news.index', compact('news'));
+        
     }
 }
