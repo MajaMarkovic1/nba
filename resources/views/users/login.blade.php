@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-
+  
 <h1>Log in</h1>
 <form style="width: 40%;" action='/login' method='POST'>
 

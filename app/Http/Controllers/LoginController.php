@@ -25,7 +25,7 @@ class LoginController extends Controller
                 'message' => 'Bad credentials. Please try again!'
             ]);
 
-        }    
+        }   
 
         return redirect('/');
     }
@@ -36,4 +36,5 @@ class LoginController extends Controller
 
         return redirect('/login'); 
     }
+
 }
