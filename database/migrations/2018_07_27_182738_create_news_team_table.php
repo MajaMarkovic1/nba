@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsTeamsTable extends Migration
+class CreateNewsTeamTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateNewsTeamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_teams', function (Blueprint $table) {
+        Schema::create('news_team', function (Blueprint $table) {
             $table->integer('news_id');
             $table->integer('team_id');
-            $table->timestamps();
+            $table->primary('news_id', 'team_id');
         });
     }
 
@@ -27,6 +27,6 @@ class CreateNewsTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_teams');
+        Schema::dropIfExists('news_team');
     }
 }

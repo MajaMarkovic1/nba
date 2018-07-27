@@ -13,7 +13,7 @@
             </li>
         @endforeach
     </ul><br>
-    <a href="/team/{{ $team->id }}/news">News</a>
+    <a href="/news/team/{{ $team->name }}">News</a>
 
     <h4>Comments:</h4>
     <form action='/teams/{{ $team->id }}/comments' method='POST'>

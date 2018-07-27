@@ -27,12 +27,4 @@ class TeamController extends Controller
 
     }
 
-    public function showNews($id)
-    {
-        $team = Team::find($id);
-        $news = $team->news()->paginate(5);
-        
-        return view('news.index', compact('news'));
-        
-    }
 }
