@@ -20,6 +20,6 @@ class Team extends Model
 
     public function news()
     {
-        return $this->hasMany(News::class);
+        return $this->belongsToMany(News::class);
     }
 }
