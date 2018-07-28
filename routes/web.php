@@ -24,3 +24,5 @@ Route::get('/user/{id}', 'RegisterController@verify');
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', 'NewsController@show');
 Route::get('/news/team/{name}', 'NewsController@showNewsForTeam');
+Route::get('/create', 'NewsController@create');
+Route::post('/news', 'NewsController@store');

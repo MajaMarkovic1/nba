@@ -31,4 +31,32 @@ class NewsController extends Controller
 
         return view('news.index', compact('news'));
     }
+
+    public function create()
+    {
+        $teams = Team::all();
+
+        return view('news.create', compact('teams'));
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate(request(),[
+            'title' => 'required',
+            'content' => 'required|min:10',
+            'teams' => 'required|array'
+        ]);
+
+        $news = News::create([
+            'title' => request('title'),
+            'content' => request('content'),
+            'user_id' => auth()->user()->id
+        ]);
+
+        $request->session()->flash('message', 'Thank you for publishing article on www.nba.com!');
+        
+        $news->teams()->attach(request('teams'));
+
+        return redirect('/news');
+    }
 }

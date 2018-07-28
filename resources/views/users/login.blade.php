@@ -19,7 +19,7 @@
     
   </div>
 
-  <button type="submit" class="btn btn-dark">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
   @include('partials.error-message', ['fieldName' => 'message'])
   
 </form>

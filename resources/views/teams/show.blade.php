@@ -5,7 +5,7 @@
     <p><em>Email</em>: {{ $team->email }}</p>
     <p><em>Address</em>: {{ $team->address }}</p>
     <p><em>City</em>: {{ $team->city }}</p>
-    <a class="btn btn-dark" href="/news/team/{{ $team->name }}">News</a>
+    <a class="btn btn-primary" href="/news/team/{{ $team->name }}">News</a>
     
     <h4>Players</h4>
     <ul class="players">
@@ -27,7 +27,7 @@
             
         </div>
 
-        <button type="submit" class="btn btn-dark">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
         @include('partials.error-message', ['fieldName' => 'message'])
     
     </form>
