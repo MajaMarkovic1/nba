@@ -2,7 +2,7 @@
 @section('content')
   
 <h1>Create news</h1>
-<form style="width: 40%;" action='/news' method='POST'>
+<form style="width: 80%;" action='/news' method='POST'>
 
         {{ csrf_field() }}
 
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="content">Content</label>
-        <input name="content" type="text" class="form-control" id="content" placeholder="Content">
+        <textarea name="content" class="form-control" id="content" placeholder="Content"></textarea>
         @include('partials.error-message', ['fieldName' => 'content'])
         
     </div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/nba.css">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark" >
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;" >
         <div>
             <a href="/">Home</a>
             @if(auth()->check())
@@ -23,7 +23,27 @@
         </div>
     </nav>
     <div class="container">
-        @yield('content')
+        <div class="row">
+            <div class="col-sm-8 blog-main">
+                @yield('content')
+            </div>
+            
+            @if(auth()->check())
+                <div class="col-sm-3 offset-sm-1 blog-sidebar">
+                    <div class="sidebar-module">
+                        <h4>Teams</h4>
+                        <ol class="list-unstyled">
+                            @foreach ($teams as $team)
+                            <li>
+                                <a href='/news/team/{{ $team->name }}'>{{ $team->name }}</a>
+                            </li>
+                            @endforeach
+                        </ol>
+                    </div>
+                </div>
+            @endif
+            
+        </div>
     </div>
 </body>
 </html>

@@ -4,8 +4,9 @@
     @if(Session::has('message'))
     <p class="alert alert-info">{{ Session::get('message') }}</p>
     @endif
-
+    
     <a class="btn btn-primary" href="/create">Create news</a>
+    
     <ul>
         @if( auth()->check() )
        

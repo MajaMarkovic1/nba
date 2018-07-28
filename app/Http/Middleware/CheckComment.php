@@ -15,10 +15,7 @@ class CheckComment
      */
     public function handle($request, Closure $next)
     {
-        
-        if (strstr($request->get('content') ,'idiot') ||
-        strstr($request->get('content') , 'stupid') ||
-        strstr($request->get('content') , 'hate'))
+        if ( str_contains($request->get('content'), ['hate', 'idiot', 'stupid']) )
         {
 
             return response(view('teams.forbidden-comment'));

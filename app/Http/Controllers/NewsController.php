@@ -27,7 +27,7 @@ class NewsController extends Controller
     {
         $team = Team::where('name', $name)->first();
 
-        $news = $team->news()->paginate(10);
+        $news = $team->news()->latest()->paginate(10);
 
         return view('news.index', compact('news'));
     }
