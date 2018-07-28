@@ -16,7 +16,6 @@ class CreateNewsTeamTable extends Migration
         Schema::create('news_team', function (Blueprint $table) {
             $table->integer('news_id');
             $table->integer('team_id');
-            $table->primary('news_id', 'team_id');
         });
     }
 

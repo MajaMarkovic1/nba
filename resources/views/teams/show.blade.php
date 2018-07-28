@@ -5,6 +5,8 @@
     <p><em>Email</em>: {{ $team->email }}</p>
     <p><em>Address</em>: {{ $team->address }}</p>
     <p><em>City</em>: {{ $team->city }}</p>
+    <a class="btn btn-dark" href="/news/team/{{ $team->name }}">News</a>
+    
     <h4>Players</h4>
     <ul class="players">
         @foreach($team->players as $player)
@@ -13,7 +15,6 @@
             </li>
         @endforeach
     </ul><br>
-    <a href="/news/team/{{ $team->name }}">News</a>
 
     <h4>Comments:</h4>
     <form action='/teams/{{ $team->id }}/comments' method='POST'>
