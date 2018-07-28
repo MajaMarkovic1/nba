@@ -20,7 +20,7 @@
     </div>
 
     @if(count($teams))
-        <label for='teams[]'>Teams</label><br>
+        <h5>Teams:</h5><br>
         @foreach($teams as $team)
         <div class='checkbox'>
             <label for="team">{{ $team->name }}</label>

@@ -27,7 +27,9 @@ class LoginController extends Controller
 
         } else  if( auth()->user()->is_verified === 0 ){
             auth()->logout();
-            return 'check your email';
+            return back()->withErrors([
+                'message' => 'You must verify your registration first. Please, check your email!'
+            ]);
         }
 
         return redirect('/');
